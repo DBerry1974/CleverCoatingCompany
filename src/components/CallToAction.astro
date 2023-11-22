@@ -1,0 +1,75 @@
+---
+import { Image } from "@astrojs/image/components";
+import  Button  from "./Buttons/PrimaryButton.astro"
+
+interface Props {
+  background?: string;
+  title?: string;
+  description?: string;
+  linkText?: string;
+  href?: string;
+  Button?: string;
+  spanTitle?: string;
+  titleSpan?: string; 
+  spanTitleNext?: string;
+  ImageAlt: string;
+}
+const {
+  background,
+  title,
+  description,
+  linkText,
+  href = "https://www.grafternow.com/find-labourers",
+  spanTitle,
+  titleSpan,
+  spanTitleNext,
+  ImageAlt
+} = Astro.props;
+---
+<div class="max-w-7xl mx-auto px-6 mb-10 mt-10 md:mt-0">
+
+<div class="relative overflow-hidden py-10  rounded-lg"
+>
+  <Image
+    class="absolute lg:w-screen top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 hidden lg:block"
+    src={background}
+    alt={ImageAlt}
+    width={1920}
+    height={1080}
+    format={"webp"}
+  />
+  <div class="absolute inset-0 bg-brand-primary lg:bg-black lg:opacity-50"></div>
+  <div class="relative">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2
+        class="font-extrabold text-3xl tracking-tight text-white sm:text-5xl"
+      >
+        {title}
+      </h2>
+      
+      <h2
+        class="font-display inline font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+      >
+      {spanTitle}</h2>
+      <span class="text-orange-500 font-display inline font-extrabold text-3xl tracking-tight sm:text-6xl">{titleSpan}</span>
+      <h2
+      class="font-display inline font-extrabold text-3xl tracking-tight text-white sm:text-6xl"
+    >
+      {spanTitleNext}</h2>
+
+      <!--<p class="mt-4 text-xl tracking-tight text-white">
+        {description}
+      </p>-->
+
+      <div class="mt-6">
+        <div class="mx-auto max-w-7xl md:text-lg md:leading-8 text-white">
+          <slot name="ctaContent" />
+        </div>
+
+      <Button href={href} rel className="mt-10">
+        {linkText}
+      </Button> 
+    </div>
+  </div>
+</div>
+</div>

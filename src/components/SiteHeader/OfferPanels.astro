@@ -1,0 +1,80 @@
+---
+import FacebookIcon from "../../icons/Facebook.astro";
+import TripAdvisorIcon from "../../icons/TripAdvisor.astro";
+import TwitterIcon from "../../icons/Twitter.astro";
+
+const offers = [
+  {
+    name: "Sign up to our membership",
+    description: "Get an exclusive £5 off code",
+    href: "/sign-up",
+  },
+  {
+    name: "Follow us on social media",
+    description: "Hear about new treatments",
+    href: "#",
+  },
+  {
+    name: "Purchase one of our gift vouchers",
+    description: "Perfect gift for a loved one",
+    href: "/gift-vouchers",
+  },
+];
+---
+
+<div class="flex flex-col">
+  <nav aria-label="Offers" class="order-last lg:order-first">
+    <div class="mx-auto max-w-7xl lg:px-8">
+      <ul
+        role="list"
+        class="grid grid-cols-1 divide-y divide-gray-200 lg:grid-cols-3 lg:divide-y-0 lg:divide-x"
+      >
+        <li class="flex flex-col">
+          <a
+            href="/sign-up"
+            class="relative flex flex-1 flex-col justify-center bg-white py-6 px-4 text-center focus:z-10"
+          >
+            <p class="text-sm text-gray-500">Sign up to our membership</p>
+            <p class="font-semibold text-gray-900">
+              Get an exclusive £5 off code
+            </p>
+          </a>
+        </li>
+        <li class="flex flex-col">
+          <div
+            class="relative flex flex-1 flex-col justify-center bg-white py-6 px-4 text-center focus:z-10"
+          >
+            <div class="text-sm text-gray-400 flex justify-center">
+              <a
+                href="https://www.facebook.com/MassageBodyAndMindDipton/"
+                class="hover:text-gray-500 mr-2"
+                ><FacebookIcon classes="w-10 h-10" />
+              </a>
+             
+              <a
+                href="https://www.tripadvisor.co.uk/Attraction_Review-g186394-d3382728-Reviews-Body_Mind_Massage_Therapy-Newcastle_upon_Tyne_Tyne_and_Wear_England.html"
+                class="hover:text-gray-500"
+              >
+                <TripAdvisorIcon classes="w-10 h-10" />
+              </a>
+            </div>
+            <p class="font-semibold text-gray-900">Follow us on social media</p>
+          </div>
+        </li>
+        <li class="flex flex-col">
+          <a
+            href="/gift-vouchers"
+            class="relative flex flex-1 flex-col justify-center bg-white py-6 px-4 text-center focus:z-10"
+          >
+            <p class="text-sm text-gray-500">
+              Purchase one of our gift vouchers
+            </p>
+            <p class="font-semibold text-gray-900">
+              Perfect gift for a loved one
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

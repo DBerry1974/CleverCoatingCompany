@@ -1,0 +1,13 @@
+---
+interface Props {
+ 
+  textAlign?: "center" | "left" | "right";
+}
+const { textAlign = "center", } = Astro.props;
+---
+
+<h2
+  class={`block text-${textAlign} font-bold text-3xl font-sans tracking-tight text-brand-primary leading-8 sm:text-4xl`}
+>
+  <slot />
+</h2>

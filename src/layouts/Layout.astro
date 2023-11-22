@@ -1,0 +1,76 @@
+---
+import Footer from "../components/Footer/Footer.astro"
+import Header from "../components/Header/Header.astro";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+function removeTrailingSlash(str: string) {
+  return str.replace(/\/+$/, '');
+}
+
+const {
+  title,
+  description,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={removeTrailingSlash(Astro.url.href)} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:type" content="Grafter" />
+    <meta property="og:description" content="Labourers UK. Grafter connects you with experienced and reliable labourers in for your construction projects. No up front costs">
+    <meta property="og:description" content={description} />
+    <meta property="twitter:title" content="Grafter">
+    <meta property="twitter:description" content="Labourers UK. Grafter connects you with experienced and reliable labourers for your construction projects. No up front costs">
+    <meta name="description" content={description} />
+
+    <title>{title}</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Online business service",
+        "provider": {
+          "@type": "Organization",
+          "name": "GrafterNow"
+        },
+        "description": "GrafterNow provides online business services.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://www.grafternow.com/",
+          "availableLanguage": {
+            "@type": "Language",
+            "name": "English" 
+          }
+        }
+      }
+      </script>
+      
+  </head>
+  <body>
+   <Header />
+    <slot />
+    <Footer />
+    
+  </body>
+</html>

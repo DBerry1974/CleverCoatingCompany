@@ -1,0 +1,9 @@
+---
+const { textColor, classes } = Astro.props;
+---
+
+<h3
+  class={`font text-2xl font-bold tracking-tight ${textColor} sm:text-3xl ${classes}`}
+>
+  <slot />
+</h3>

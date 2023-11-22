@@ -1,0 +1,10 @@
+---
+import { navigation } from "./navigation";
+import OfferPanels from "./OfferPanels.astro";
+import { SiteHeader } from "./SiteHeader";
+---
+
+<div class="bg-white">
+  <SiteHeader navigation={navigation} client:load />
+  <OfferPanels />
+</div>

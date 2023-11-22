@@ -1,0 +1,422 @@
+---
+export const prerender = true;
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../components/Hero/Hero.astro";
+import DefaulContentBlock from "../../../components/Content/DefaultContentBlock.astro";
+import ImageOnRight from "../../../components/Content/ImageOnRight.astro";
+import ImageOnLeft from "../../../components/Content/ImageOnLeft.astro";
+import CallToAction from "../../../components/CallToAction.astro";
+import Button from "../../../components/Buttons/PrimaryButton.astro";
+import SubTitle from "../../../components/Headings/SubTitle.astro";
+import webDesign1 from "../../../assets/images/web-design-img6.jpg";
+import heroBg from "../../../assets/images/labour2.png";
+import Cali1 from "../../../assets/images/img1.png";
+import Cali2 from "../../../assets/images/img2.png";
+import Cali3 from "../../../assets/images/img3.png";
+import Cali4 from "../../../assets/images/img4.png";
+import Cali5 from "../../../assets/images/img5.jpg";
+import Reception from "../../../assets/images/reception.png";
+import Bar from "../../../assets/images/bar.jpg";
+import Pastry from "../../../assets/images/pastry.jpg";
+import Coffee from "../../../assets/images/coffee.jpg";
+import Lounge from "../../../assets/images/lounge.jpg";
+import Terrace from "../../../assets/images/terrace.jpg";
+import Location from "../../../assets/images/location.jpg";
+import Matchbox from "../../../assets/images/matchbox2.jpg";
+import cosyDouble from "../../../assets/images/cosy-double1.jpg";
+import spaciousDouble from "../../../assets/images/spacious-double2.jpg";
+import Twin from "../../../assets/images/twin1.jpg";
+import Family from "../../../assets/images/family2.jpg";
+import familyPlus from "../../../assets/images/familyplus1.jpg";
+import Library from "../../../assets/images/library.jpg";
+import oxfordSt from "../../../assets/images/oxford-street.jpg";
+import Food from "../../../assets/images/food1.jpg";
+
+import Gyle4 from "../../../assets/images/gyle4.jpg";
+import Gyle2 from "../../../assets/images/gyle2.jpg";
+import Gyle3 from "../../../assets/images/gyle3.png";
+import Gyle5 from "../../../assets/images/gyle5.jpg";
+import Toast1 from "../../../assets/images/toast1.jpg";
+import Tc2023 from "../../../assets/images/tc2023.png";
+import CtaBg1 from "../../../assets/images/hero-bg2.png";
+import tinyKing from "../../../assets/images/tiny-king.jpg";
+import largeKing from "../../../assets/images/large-king.jpg";
+import kingBathroom from "../../../assets/images/king-bathroom.jpg";
+import kingBalcony from "../../../assets/images/king-balcony.jpg";
+import gyleSuite from "../../../assets/images/gyle-suite.jpg";
+import citySuite from "../../../assets/images/city-suites.jpg";
+import featureTwin from "../../../assets/images/feature-twin.jpg";
+import museum from "../../../assets/images/museum1.jpg";
+import bookingOffice from "../../../assets/images/booking-office.jpg";
+import HeroDecorator from "../../../components/Decoraters";
+
+import Labour4 from "../../../assets/images/labour4.png";
+import Labour5 from "../../../assets/images/labour5.png";
+import Labour6 from "../../../assets/images/labour6.png";
+import Labour7 from "../../../assets/images/labour7.png";
+
+import noFee from "../../../assets/images/no-fee.png";
+import contract from "../../../assets/images/contract.png";
+import ongoing from "../../../assets/images/ongoing.png";
+import tax from "../../../assets/images/tax1.png";
+import tools from "../../../assets/images/tools.png";
+import idCheck from "../../../assets/images/id-check1.png";
+import payroll from "../../../assets/images/payroll.png";
+import invoice from "../../../assets/images/invoice.png";
+import reviews from "../../../assets/images/reviews.png";
+
+
+import {getTowns} from "../../../lib/getTowns";
+
+
+export async function getStaticPaths() {
+  const towns = await getTowns();
+
+  const paths = [];
+  for (let i = 0; i < towns.length; i++) {
+    const town = towns[i];
+    let path = town
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\`/, "")
+      .replace(/\./, "")
+      .replace(/\'/, "");
+    paths.push({ params: { slug: path }, props: { town } });
+  }
+
+  return paths;
+}
+
+const { town } = Astro.props;
+---
+
+<Layout title={`Labourers UK | Hire Labourers in ${town} | Find Reliable Labourers`} description={`Labourers UK. Grafter connects you with experienced and reliable labourers in ${town} for your construction projects. No up front costs`}>
+
+  <HeroDecorator
+  title={`Are you looking for labourers in ${town}?`}
+  sub={`Many companies looking for labourers in ${town} are choosing Grafter`}
+  town={town}
+  client:load
+/>
+
+
+<Hero
+title="Labourers UK"
+sub="Your Hassle-Free Solution for Hiring Local Labourers" 
+extraSub="Grafter"
+linkText="Find a Labourer Today"
+href="https://www.grafternow.com/find-labourers/"
+image={heroBg.src}
+
+>
+<div slot="heroContent"> 
+  <p class="mt-6 mb-4 lg:text-lg">
+    Grafter makes the process of locating and employing labourers in {town} straightforward, secure, and risk-free. The labourers on our platform boast a variety of skill sets and experience levels, with many holding CIS and CSCS certifications.  
+  </p>
+  <p class="mb-4 lg:text-lg">
+    Grafters can fill a range of jobs for you from labouring on construction sites through to warehouse work or landscaping.
+With Grafter's app, the inconvenience, expense, and paperwork typically associated with hiring a local labourer are eliminated. You can post a job, browse through profiles that include details of previous work and reviews, and engage in conversations with grafters, all without any upfront cost. 
+  </p> 
+  <p class="mb-4 lg:text-lg">
+    If you're looking for a site labourer, get in touch today.
+  </p>
+  
+</div>  
+</Hero>
+		
+    
+
+    <!-- TWO COLUMN CONTENT BLOCK WITH IMAGE ON RIGHT. NOTE THAT HEIGHT / WIDTH CAN BE APPLIED IF REQUIRED, FOR EXAMPLE - IF TEXT CONTENT IS LONG OR SHORT, YOU MAY WANT TO SET THE IMAGE HEIGHT TO LINE IMAGE UP WITH TEXT CONTENT -->    
+	<ImageOnRight
+    
+    title="Expert Construction Site Labour Support"
+    image={Labour4} 
+    imageAlt="Assisting trades - Hire a construction labourer today"
+    
+    height={400} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Having skilled and experienced general labourers can make or break building projects. At Grafter, we understand the pivotal role that site labourers play in ensuring the seamless execution of construction sites in {town}. 
+      </p>
+      <p class="mb-4">
+        Our platform connects you with dedicated individuals boasting extensive construction site experience and a diverse set of construction skills. 
+    </p>
+    <p class="mb-4">
+      Whether it's handling building materials, supporting ongoing building projects, or executing various tasks vital to construction operations, our pool of site labourers is equipped to meet your project's demands. If you are looking to hire labourers in {town}, get in touch today.
+  </p>
+ 
+     
+    </Fragment>
+  </ImageOnRight>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+
+ 
+
+<!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6 lg:mt-10">
+  <SubTitle>Why Choose Grafter?</SubTitle>
+
+<div
+class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
+>
+<div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-white">
+  <img
+    src={Labour5.src}
+    class="h-48 w-full object-cover"
+    alt="Labourer jobs available? Find labourers with cscs card today"
+  />
+  <h3 class="py-4 text-brand-primary text-xl font-bold px-4 text-center">
+    Find Self-Employed Labour Quickly & Easily
+
+  </h3>
+  <p class="text-gray-700 text-center">
+    Finding self-employed labourers in {town} has never been simpler. Grafter's platform allows you to effortlessly browse through a diverse pool of skilled workers, enabling quick and efficient hiring tailored to your project's needs. With just a few clicks, connect with experienced labourers ready to get the job done.  </p>
+
+
+</div>
+
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={noFee.src}
+    class="h-48 w-full object-cover"
+    alt="Labourer jobs available? Find labourers with cscs card today"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    No Fee Until You Have Found Someone to Hire
+  </h3>
+  <p>
+    Say goodbye to upfront costs and financial commitments. Grafter believes in risk-free hiring. You can explore profiles, post job requirements, and engage with potential workers without any fees. Only when you've found the right match for your project do you pay, ensuring you're completely satisfied before investing.
+  </p>
+
+</div>
+</div>
+</div>
+
+<!-- END TWO CARDS WITH IMAGE + BORDER SECTION -->
+
+<!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6 lg:mb-20">
+  
+<div
+class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
+>
+<div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-white">
+  <img
+    src={contract.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-xl font-bold px-4 text-brand-primary text-center">
+    Avoid Disagreement with Online Contract
+  </h3>
+  <p class="px-4 pb-4 text-gray-700 text-center">
+    Grafter's online contract feature ensures clarity and prevents misunderstandings. Seamlessly create and manage contracts within the platform, laying out terms and expectations upfront. This helps avoid disagreements by establishing a clear understanding between you and the hired labourer, fostering a productive working relationship.
+  </p>
+
+ 
+
+</div>
+
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={ongoing.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Easy Re-Hiring for Ongoing Work
+  </h3>
+  <p class="px-4">
+    Simplify ongoing engagements by easily re-hiring trusted labourers through Grafter. Once you've found a worker in {town} who fits your requirements perfectly, the platform streamlines the re-hiring process, saving you time and effort in sourcing new workers for recurring projects.
+
+</p>
+</div>
+
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={tax.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    CIS Tax Look-up and Rate Calculations Provided
+  </h3>
+  <p class="px-4">
+    
+    Grafter simplifies the complex world of CIS tax. Get easy access to CIS tax look-up and accurate rate calculations directly through the platform. This ensures compliance and facilitates smooth financial transactions with your hired labourers.
+</p>
+</div>
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={tools.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Tools to Help Manage the Engagement
+  </h3>
+  <p class="px-4">
+    
+    Grafter's suite of management tools empowers you to efficiently oversee your engagements. From project tracking to communication tools, the platform provides essential resources to streamline the entire workflow, enhancing productivity and organization.
+</p>
+</div>
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={idCheck.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    ID and Tax Status Checks Completed
+  </h3>
+  <p class="px-4">
+    
+    Rest assured with Grafter's rigorous verification process. The platform conducts comprehensive ID and tax status checks on workers in {town}, ensuring reliability and compliance with legal requirements, giving you peace of mind when hiring.
+  </p>
+</div>
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={payroll.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Simple, Secure Online Worker Payments
+  </h3>
+  <p class="px-4">
+    
+    Grafter ensures secure and hassle-free payment transactions. Through the platform's secure online system, you can make payments to your workers conveniently, enhancing the overall efficiency and security of the payment process.
+</p>
+</div>
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={invoice.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Worker Invoices Provided, Including CIS
+  </h3>
+  <p class="px-4">
+   
+    Simplify your accounting processes with Grafter's automatically generated worker invoices, inclusive of CIS information. This feature streamlines record-keeping and financial management, providing clarity and ease in managing payments.
+</p>
+</div>
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={reviews.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Reviews Ensure Workers Do a Good Job 
+  </h3>
+  <p class="px-4">
+   
+    Trust and quality assurance are paramount. Grafter's review system allows both employers and labourers to provide feedback, ensuring accountability and incentivizing workers to consistently deliver top-notch performance, fostering a reliable and efficient workforce.
+</p>
+</div>
+
+
+
+</div>
+</div>
+
+<!-- END TWO CARDS WITH IMAGE + BORDER SECTION -->
+
+
+<CallToAction
+    background={Labour7.src}  
+    title={`Find Local Labourers in ${town} Now`}`
+    ImageAlt="Find full time Local Labourers whi have completed a college course"
+    linkText="Find Out More">
+    <div slot="ctaContent"> 
+      <p class="mt-6 mb-4 lg:text-lg">
+        
+        Get started with Grafter today! Find skilled labourers ready to support your construction projects. 
+      </p>
+      <p class="mb-4 lg:text-lg">
+       Simplify your hiring process and connect with reliable workers for smoother operations. Sign up now and take your construction projects to the next level.
+      </p>
+    </div>
+  </CallToAction>
+
+
+  <ImageOnLeft
+    
+  title="CSCS Certified Labourers"
+  image={Labour6} 
+  imageAlt="General Labourer - paid weekly or per hour"
+  titleColor="black"
+  height={400}
+  width={600}
+>
+  <Fragment slot="content" >
+    <p class="my-4">
+      Our dedicated team of general labourers is the cornerstone of successful building projects. Equipped with a diverse array of construction skills, these site labourers are adept at managing crucial construction operations and handling various building materials essential for constructing concrete structures. 
+   </p>
+    <p>
+      Labourers with CSCS labourer card certification, our construction labourers bring a level of professionalism and proficiency that's unmatched. 
+    </p>
+   <p>
+    Whether it's labouring work or executing intricate construction operations, our general labourers excel in delivering top-notch results. 
+    </p>
+  
+   
+  </Fragment>
+</ImageOnLeft>
+
+<ImageOnRight
+    
+    title="Find Local Labour Effortlessly"
+    image={Labour4} 
+    imageAlt="Whatever your working days - find a labourer, with hand tools and hard hat!"
+    
+    height={400} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        At Grafter, we thrive on ensuring your construction projects reach their pinnacle of success.       </p>
+      <p class="mb-4">
+        Our commitment doesn't end at connecting you with skilled labourers; it extends to facilitating a seamless and efficient collaboration that drives your projects forward. 
+    </p>
+    <p class="mb-4">
+      With a platform designed to simplify hiring and empower your construction operations, Grafter stands as your trusted partner in achieving excellence.   </p>
+ 
+      <p class="mb-4">
+        Join us today to experience the difference and witness your construction goals transformed into reality. </p>
+    </Fragment>
+  </ImageOnRight>
+ <div class="lg:mb-20 lg:mt-10">
+  <CallToAction
+  background={Labour7.src}  
+  title={`Find Local Labourers in ${town} Now`}`
+  ImageAlt="Find Local Labourers"
+  linkText="Find Out More">
+ 
+  <div slot="ctaContent"> 
+    <p class="mt-6 mb-4 lg:text-lg">
+      
+      Get started with Grafter today! Find skilled labourers ready to support your construction projects. 
+    </p>
+    <p class="mb-4 lg:text-lg">
+     Simplify your hiring process and connect with reliable workers for smoother operations. Sign up now and take your construction projects to the next level.
+    </p>
+  </div>
+</CallToAction>
+</div>
+
+
+</Layout>  
+

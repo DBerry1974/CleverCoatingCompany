@@ -1,0 +1,25 @@
+---
+const {
+  label,
+  name,
+  handleChange,
+  id,
+  autocomplete,
+  placeholder,
+  type = "text",
+  value = "",
+} = Astro.props;
+---
+
+<label for={id} class="sr-only">
+  {label}
+</label>
+<input
+  name={name}
+  id={id}
+  value={value}
+  auto-complete={autocomplete}
+  class="block form-input w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-orange-300 focus:ring-orange-300"
+  placeholder={placeholder}
+  type={type}
+/>

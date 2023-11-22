@@ -1,0 +1,42 @@
+---
+const navigation = [
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms & Conditions", href: "/terms-and-conditions" },
+  { name: "Contact", href: "/contact" },
+];  
+
+---
+
+<footer class="bg-gray-700 py-10 mt-20">
+ <!-- <div class="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+    <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+      {
+        navigation.map((item) => (
+          <div class="px-5 py-2">
+            <a
+              href={item.href}
+              class="text-base text-gray-300 hover:text-white"
+            >
+              {item.name}
+            </a>
+          </div>
+        ))
+      }
+    </nav>
+    <div class="mt-8 flex justify-center space-x-6">
+      {
+        social.map(({ href, name, icon: Icon }) => (
+          <a href={href} class="text-gray-400 hover:text-gray-300">
+            <Icon classes="h-6 w-6" aria-hidden="true" />
+          </a>
+        ))
+      }
+    </div>--> 
+    <p class="mt-8 text-base text-white text-center">
+      &copy; {new Date().getFullYear()} The Clever Coating Company. All rights reserved.
+    </p>
+   
+    
+  </div>
+
+</footer>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  href?: string;
+  marginTop?: boolean;
+  newTab?: boolean;
+}
+const { href, marginTop = true, newTab = false } = Astro.props;
+---
+
+{
+  !!href ? (
+    <a
+      href={href}
+      target={newTab ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+      class={`${
+        marginTop && "mt-6"
+      } block sm:inline-flex items-center text-center uppercase no-underline bg-brand-secondary px-5 py-3 text-sm sm:text-lg tracking-wider font-bold hover:bg-brand-primary shadow-lg text-white rounded-lg`}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      
+      class={`${
+        marginTop && "mt-6"
+      }  block sm:inline-flex items-center uppercase px-4 sm:px-7 py-4 text-sm sm:text-lg tracking-wider font-bold shadow-sm hover:bg-yellow-700 focus:outline-none focus:ring-2  focus:ring-offset-2`}
+    >
+      <slot />
+    </button>
+  )
+}

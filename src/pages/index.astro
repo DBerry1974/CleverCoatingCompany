@@ -1,0 +1,293 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero/Hero.astro";
+import DefaulContentBlock from "../components/Content/DefaultContentBlock.astro";
+import ImageOnRight from "../components/Content/ImageOnRight.astro";
+import ImageOnLeft from "../components/Content/ImageOnLeft.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Button from "../components/Buttons/PrimaryButton.astro";
+import SubTitle from "../components/Headings/SubTitle.astro";
+import webDesign1 from "../assets/images/web-design-img6.jpg";
+import heroBg from "../assets/images/labour2.png";
+
+
+
+import HeroDecorator from "../components/Decoraters";
+
+import Labour4 from "../assets/images/labour4.png";
+import Labour5 from "../assets/images/labour5.png";
+import Labour6 from "../assets/images/labour6.png";
+import Labour7 from "../assets/images/labour7.png";
+
+import noFee from "../assets/images/no-fee.png";
+import contract from "../assets/images/contract.png";
+import ongoing from "../assets/images/ongoing.png";
+import tax from "../assets/images/tax1.png";
+import tools from "../assets/images/tools.png";
+import idCheck from "../assets/images/id-check1.png";
+import payroll from "../assets/images/payroll.png";
+import invoice from "../assets/images/invoice.png";
+import reviews from "../assets/images/reviews.png";
+---
+
+<Layout title={`Labourers UK | Hire Labourers | Find Reliable Labourers`} description={`Labourers UK. Grafter connects you with experienced and reliable labourers in for your construction projects. No up front costs`}>
+
+
+
+
+<Hero
+title="Rubber Roofing Milton Keynes"
+sub="20% Discount on EPDM Rubber Roofing in Milton Keynes" 
+linkText="Get a Quote Today"
+href="hhttps://theclevercoatingcompany.co.uk/epdm-flat-roofing-the-clever-coating-company/"
+image={heroBg.src}
+
+>
+<div slot="heroContent"> 
+  <p class="mt-6 mb-4 lg:text-lg">
+    Specialising in EPDM flat roof systems, we're proud to offer cutting-edge flat roofing technology. Technology that is proven to be durable, weather-resistant, and unbeatable in quality - just the kind of quality witnessed in some of the world's most iconic buildings.   
+  </p>
+  <p class="mb-4 lg:text-lg">
+    If you're in search of a hard-wearing, long-lasting roof that requires zero maintenance, you've come to the right place. Our rubber roofing is not just a superb value for money with a 20-year guarantee, it's also currently available with a 20% discount. When it comes to secure, waterproof roofing solutions, our ultra-durable EPDM flat roof system is the choice you can trust.  </p> 
+
+</div>  
+</Hero>
+		
+    
+
+    <!-- TWO COLUMN CONTENT BLOCK WITH IMAGE ON RIGHT. NOTE THAT HEIGHT / WIDTH CAN BE APPLIED IF REQUIRED, FOR EXAMPLE - IF TEXT CONTENT IS LONG OR SHORT, YOU MAY WANT TO SET THE IMAGE HEIGHT TO LINE IMAGE UP WITH TEXT CONTENT -->    
+	<ImageOnRight
+    
+    title="Quality, Durability, and Peace of Mind with Our EPDM Roofs"
+    image={Labour4} 
+    imageAlt="Quality, Durability, and Peace of Mind with Our EPDM Roofs"
+    
+    height={400} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        When it comes to rubber roofing systems, The Clever Coating Company stands unparalleled in the roofing industry. We have a rich legacy in supplying EPDM rubber roofs, a testament to our commitment to providing only the best for our customers. Our flat roofing system is a bespoke solution, designed specifically to cater to your unique needs. The EPDM rubber roofs we supply are renowned for their durability and resilience, able to withstand harsh weather conditions without wavering in quality. 
+      </p>
+      <p class="mb-4">
+        Our rubber roofing systems are more than just a purchase; they are a long-term investment towards a worry-free future. With our roof EPDM, you can rest easy knowing that your property is protected by a durable, weather-resistant and low-maintenance roof. Plus, all our roofs come with a 20-year guarantee, a reflection of our unwavering confidence in the quality of our products.
+    </p>
+    <p class="mb-4">
+        Choosing The Clever Coating Company means choosing reliability, quality, and peace of mind. Our friendly, professional team is ready to assist you in transforming your property with our superior rubber roofing systems. Don't compromise on quality; choose The Clever Coating Company for your EPDM rubber roof needs.
+      </p>
+ 
+     
+    </Fragment>
+  </ImageOnRight>
+  <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
+
+ 
+
+<!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6 lg:mt-10">
+  <SubTitle>Benefits of EPDM Rubber Flat Roofing</SubTitle>
+
+<div
+class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
+>
+<div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-white">
+  <img
+    src={Labour5.src}
+    class="h-48 w-full object-cover"
+    alt="Labourer jobs available? Find labourers with cscs card today"
+  />
+  <h3 class="py-4 text-brand-primary text-xl font-bold px-4 text-center">
+    Unsurpassed Durability
+
+  </h3>
+  <p class="text-gray-700 text-center">
+    EPDM rubber flat roofing is renowned for its extreme durability. Its robustness withstands all weather conditions and substantial foot traffic, making it a prime choice for flat roofs. Moreover, it resists ageing, deterioration, and surface erosion, maintaining its integrity for decades. 
+ </p>
+
+
+</div>
+
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={noFee.src}
+    class="h-48 w-full object-cover"
+    alt="Labourer jobs available? Find labourers with cscs card today"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Low Maintenance
+  </h3>
+  <p>
+    
+One of the compelling advantages of our EPDM rubber roofing system is its minimal maintenance requirements. Once installed, the roof requires little to no upkeep, saving you both time and money in the long-term. 
+  </p>
+
+</div>
+</div>
+</div>
+
+<!-- END TWO CARDS WITH IMAGE + BORDER SECTION -->
+
+<!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
+<div class="mx-auto max-w-7xl px-6 lg:mb-20">
+  
+<div
+class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
+>
+<div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-white">
+  <img
+    src={contract.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-xl font-bold px-4 text-brand-primary text-center">
+    Weather Resistance
+  </h3>
+  <p class="px-4 pb-4 text-gray-700 text-center">
+    
+    EPDM flat roofs are incredibly resistant to the persistent onslaught of the elements. They hold up exceptionally well against UV radiation, rain, snow, hail, and high winds, providing dependable protection all year round.  </p>
+
+ 
+
+</div>
+
+
+
+
+<div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
+  <img
+    src={tax.src}
+    class="h-48 w-full object-cover"
+    alt="Find Local labourers"
+  />
+  <h3 class="py-4 text-center text-brand-primary text-xl font-bold px-4">
+    Cost-Effective
+  </h3>
+  <p class="px-4">
+    
+    Last but not least, our EPDM rubber flat roofs provide exceptional value for money. Thanks to their longevity and minimal maintenance costs, they are an economically sound investment that provides peace of mind for years to come. Not to mention, with our current 20% discount offer, there's never been a better time to opt for a rubber flat roof.
+</p>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<!-- END TWO CARDS WITH IMAGE + BORDER SECTION -->
+
+
+<CallToAction
+    background={Labour7.src}  
+    title="Act Now for Superior Roofing"
+    ImageAlt="Act Now for Superior Roofing"
+    linkText="SECURE YOUR DISCOUNT">
+    <div slot="ctaContent"> 
+      <p class="mt-6 mb-4 lg:text-lg">
+        
+        Experience the transformative power of our EPDM rubber roofing solutions today. Our expert team is ready to help you upgrade to a sustainable, long-lasting, and weather-resistant roof. Don't delay – secure your 20% discount now and enjoy peace of mind with our 20-year guarantee.
+        
+      </p>
+      <p class="mb-4 lg:text-lg">
+        Contact us to schedule a free consultation and learn more about our robust EPDM rubber roofing system. With one call, you can start your journey to a safe, sustainable, and efficient roofing future with The Clever Coating Company. Remember, investing in our roof is investing in a worry-free property future.
+      </p>
+    </div>
+  </CallToAction>
+
+
+  <ImageOnLeft
+    
+  title="Replacing Your Current Flat Roof with an EPDM Rubber Flat Roof"
+  image={Labour6} 
+  imageAlt="Replacing Your Current Flat Roof with an EPDM Rubber Flat Roof"
+  titleColor="black"
+  height={400}
+  width={600}
+>
+  <Fragment slot="content" >
+    <p class="my-4">
+        If your current flat roof is nearing the end of its lifespan or causing you regular issues, it may be time to consider replacing it with our robust and reliable EPDM rubber flat roof. 
+       </p>
+    <p>
+        The process of replacement is quick, efficient, and less disruptive than traditional roofing methods. Our expert team will carefully remove your existing roof, before preparing the surface and installing the new EPDM rubber roof. 
+        </p>
+   <p>
+    The roof is installed seamlessly, ensuring a perfect fit and superior protection. Replacing your current roof with an EPDM rubber roof is not just an investment in a high-quality roof, it's an investment in peace of mind, knowing that your property is protected by a roof that is built to last.
+    </p>
+  
+   
+  </Fragment>
+</ImageOnLeft>
+
+<ImageOnRight
+    
+    title="EPDM Flat Roof Installation Process"
+    image={Labour4} 
+    imageAlt="EPDM Flat Roof Installation Process"
+    
+    height={400} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        Our EPDM flat roof installation process is methodical and efficient. 
+      </p>
+      <p class="mb-4">
+        Initially, our professional team carries out a thorough examination of the existing roof and structure, ensuring it is in a state to receive the new EPDM rubber roofing. 
+      </p>
+    <p class="mb-4">
+      After the inspection, the old roofing is removed, and any necessary structural modifications are made. Then, we apply a high-quality adhesive to the substrate, which serves as the base for the EPDM membrane. 
+    </p>
+ 
+      <p class="mb-4">
+        The rubber roofing material is then carefully rolled onto the adhesive, ensuring every inch is secure and bonded to the roof. Once the membrane is in place, we use specialized tools to seal all edges and seams, creating a fully waterproof and weather-resistant barrier.
+      </p>
+    </Fragment>
+  </ImageOnRight>
+
+  <ImageOnLeft
+    
+    title="Sustainability and Environmental Impact"
+    image={Labour4} 
+    imageAlt="Sustainability and Environmental Impact"
+    
+    height={400} 
+    width={500}
+  >
+    <Fragment slot="content" >
+      <p class="my-4">
+        At The Clever Coating Company, we are proud to say that our EPDM rubber roofing is not just durable and high-quality, but also environmentally friendly. 
+      </p>
+      <p class="mb-4">
+        This eco-conscious roofing material is highly sustainable, reducing the carbon footprint of your property. In comparison to traditional materials, EPDM roofing requires less energy to manufacture and install. Plus, at the end of its impressively long life cycle, it’s 100% recyclable. 
+      </p>
+    <p class="mb-4">
+      This means that when you choose our EPDM flat roof, you're not only opting for a solution that offers superb value for money and a 20-year guarantee, but you're also making a choice that's better for our planet. Choose our rubber roofing, and make a long-lasting, eco-friendly investment in your property.
+    </p>
+ 
+    </Fragment>
+  </ImageOnLeft>
+ 
+  <CallToAction
+  background={Labour7.src}  
+  title="Act Now for Superior Roofing"
+  ImageAlt="Act Now for Superior Roofing"
+  linkText="SECURE YOUR DISCOUNT">
+  <div slot="ctaContent"> 
+    <p class="mt-6 mb-4 lg:text-lg">
+      
+      Experience the transformative power of our EPDM rubber roofing solutions today. Our expert team is ready to help you upgrade to a sustainable, long-lasting, and weather-resistant roof. Don't delay – secure your 20% discount now and enjoy peace of mind with our 20-year guarantee.
+      
+    </p>
+    <p class="mb-4 lg:text-lg">
+      Contact us to schedule a free consultation and learn more about our robust EPDM rubber roofing system. With one call, you can start your journey to a safe, sustainable, and efficient roofing future with The Clever Coating Company. Remember, investing in our roof is investing in a worry-free property future.
+    </p>
+  </div>
+</CallToAction>
+
+</Layout>  
+
