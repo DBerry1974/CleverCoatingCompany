@@ -9,12 +9,20 @@ import CallToAction from "../components/CallToAction.astro";
 import Button from "../components/Buttons/PrimaryButton.astro";
 import SubTitle from "../components/Headings/SubTitle.astro";
 import webDesign1 from "../assets/images/web-design-img6.jpg";
-import heroBg from "../assets/images/labour2.png";
+import heroBg from "../assets/images/flat-roof1.png";
 
 
 
 import HeroDecorator from "../components/Decoraters";
 
+import flatRoof2 from "../assets/images/flat-roof2.jpg";
+import flatRoof3 from "../assets/images/flat-roof3.jpg";
+import flatRoof4 from "../assets/images/flat-roof4.png";
+import weatherproof from "../assets/images/weatherproof.png";
+import costEffective from "../assets/images/Cost-Effective.png";
+import process from "../assets/images/process1.png";
+import beforeAfter from "../assets/images/before-after.png";
+import sustainability from "../assets/images/sustainability.png";
 import Labour4 from "../assets/images/labour4.png";
 import Labour5 from "../assets/images/labour5.png";
 import Labour6 from "../assets/images/labour6.png";
@@ -40,7 +48,7 @@ import reviews from "../assets/images/reviews.png";
 title="Rubber Roofing Milton Keynes"
 sub="20% Discount on EPDM Rubber Roofing in Milton Keynes" 
 linkText="Get a Quote Today"
-href="hhttps://theclevercoatingcompany.co.uk/epdm-flat-roofing-the-clever-coating-company/"
+href="https://theclevercoatingcompany.co.uk/epdm-flat-roofing-the-clever-coating-company/"
 image={heroBg.src}
 
 >
@@ -60,11 +68,11 @@ image={heroBg.src}
 	<ImageOnRight
     
     title="Quality, Durability, and Peace of Mind with Our EPDM Roofs"
-    image={Labour4} 
+    image={flatRoof2} 
     imageAlt="Quality, Durability, and Peace of Mind with Our EPDM Roofs"
     imageHeading="EPDM rubber roofing with a life expectancy of up to 50 years"
-    height={400} 
-    width={500}
+    height={550} 
+    width={600}
   >
     <Fragment slot="content" >
       <p class="my-4">
@@ -73,15 +81,17 @@ image={heroBg.src}
       <p class="mb-4">
         Our rubber roofing systems are more than just a purchase; they are a long-term investment towards a worry-free future. With our roof EPDM, you can rest easy knowing that your property is protected by a durable, weather-resistant and low-maintenance roof. Plus, all our roofs come with a 20-year guarantee, a reflection of our unwavering confidence in the quality of our products.
     </p>
-    <p class="mb-4">
-        Choosing The Clever Coating Company means choosing reliability, quality, and peace of mind. Our friendly, professional team is ready to assist you in transforming your property with our superior rubber roofing systems. Don't compromise on quality; choose The Clever Coating Company for your EPDM rubber roof needs.
-      </p>
+   
  
      
     </Fragment>
   </ImageOnRight>
   <!-- END IMAGE ON RIGHT CONTENT BLOCK -->
-
+  <div class="mx-auto max-w-7xl px-4 -mt-8 lg:px-7 lg:-mt-14">
+    <p class="mb-4 lg:text-lg text-gray-700">
+      Choosing The Clever Coating Company means choosing reliability, quality, and peace of mind. Our friendly, professional team is ready to assist you in transforming your property with our superior rubber roofing systems. Don't compromise on quality; choose The Clever Coating Company for your EPDM rubber roof needs.
+    </p>
+  </div>
  
 
 <!-- BEGIN TWO CARDS SECTION WITH IMAGE + BORDER. GRID SECTION IS WRAPPED IN A DIV -->
@@ -93,7 +103,7 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
 >
 <div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-white">
   <img
-    src={Labour5.src}
+    src={flatRoof3.src}
     class="h-48 w-full object-cover"
     alt="Rubber roofs - durable EPDM roofing"
   />
@@ -111,7 +121,7 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
 
 <div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
   <img
-    src={noFee.src}
+    src={flatRoof4.src}
     class="h-48 w-full object-cover"
     alt="Rubber roofs - durable EPDM roofing"
   />
@@ -137,7 +147,7 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
 >
 <div class="flex flex-col overflow-hidden rounded-lg mb-10 pb-4 bg-white">
   <img
-    src={contract.src}
+    src={weatherproof.src}
     class="h-48 w-full object-cover"
     alt="Rubber roof - durable EPDM roofing"
   />
@@ -157,7 +167,7 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
 
 <div class="flex flex-col text-gray-700 text-center overflow-hidden rounded-lg bg-white mb-4 md:mb-10 pb-4">
   <img
-    src={tax.src}
+    src={costEffective.src}
     class="h-48 w-full object-cover"
     alt="Rubber roof - durable EPDM roofing"
   />
@@ -182,7 +192,7 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
 
 
 <CallToAction
-    background={Labour7.src}  
+    background={heroBg.src}  
     title="Act Now for Superior Roofing"
     ImageAlt="Rubber roof - durable EPDM roofing"
     linkText="SECURE YOUR DISCOUNT">
@@ -202,10 +212,10 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
   <ImageOnLeft
     
   title="Replacing Your Current Flat Roof with an EPDM Rubber Roof"
-  image={Labour6} 
+  image={beforeAfter} 
   imageAlt="Replacing Your Current Flat Roof with an EPDM rubber roof"
   titleColor="black"
-  height={400}
+  height={500}
   width={600}
 >
   <Fragment slot="content" >
@@ -226,11 +236,11 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
 <ImageOnRight
     
     title="EPDM Flat Roof Installation Process"
-    image={Labour4} 
+    image={process} 
     imageAlt="EPDM Flat Rubber Roof Installation Process"
     
-    height={400} 
-    width={500}
+    height={500} 
+    width={600}
   >
     <Fragment slot="content" >
       <p class="my-4">
@@ -252,11 +262,11 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
   <ImageOnLeft
     
     title="Sustainability and Environmental Impact"
-    image={Labour4} 
+    image={sustainability} 
     imageAlt="Sustainability and Environmental Impact"
     
-    height={400} 
-    width={500}
+    height={500} 
+    width={600}
   >
     <Fragment slot="content" >
       <p class="my-4">
@@ -273,7 +283,7 @@ class="mt-12 grid w-full lg:gap-10 lg:grid-cols-2"
   </ImageOnLeft>
  
   <CallToAction
-  background={Labour7.src}  
+  background={heroBg.src}  
   title="Act Now for Superior Roofing"
   ImageAlt="Act Now for Superior Roofing"
   linkText="SECURE YOUR DISCOUNT">
